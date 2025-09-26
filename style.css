@@ -14,19 +14,255 @@ body {
 header {
   background-color: #ffffff;
   padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+}
 
+.navbar a:hover {
+  color: #c8aa82;
+}
+
+.navbar a.active {
+  color: #c8aa82;
+  font-weight: bold;
+  border-bottom: 2px solid #c8aa82;
+}
+
+.hero {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.cta {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #c8aa82;
+  border-radius: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 30px;
+}
+
+.cta:hover {
+  background-color: #b48b5a;
+  transform: scale(1.05);
+}
+
+.testimonials {
+  background-color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.testimonial h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c8aa82;
+}
+
+.section {
+  padding: 20px 20px 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section p {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  color: #555;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #c8aa82;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-btn:hover {
+  background-color: #b48b5a;
+  transform: scale(1.05);
+}
+
+.visitors {
+  background-color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.visitors h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.visitors h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: normal;
+}
+
+.steps-list {
+  list-style: decimal;
+  padding-left: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.steps-list li {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.steps-list a {
+  text-decoration: none;
+  color: #c8aa82;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.steps-list a:hover {
+  color: #b48b5a;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Attractions cards */
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+  .steps-list {
+    font-size: 1rem;
+    padding-left: 20px;
+  }
 }
