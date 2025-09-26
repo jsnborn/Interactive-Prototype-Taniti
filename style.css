@@ -299,6 +299,20 @@ header {
   outline: none;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.3rem;
+  color: #555;
+}
+footer a {
+  color: #c8aa82;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #b48b5a;
+}
+
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
